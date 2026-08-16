@@ -1,0 +1,980 @@
+/* ================================
+   GRATITUDE JOURNAL - APP STYLES
+   ================================ */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  background: #f8f1eb;
+  color: #654b3d;
+  font-family: Georgia, "Times New Roman", serif;
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+}
+
+/* ================================
+   MAIN APP
+   ================================ */
+
+.app {
+  min-height: 100vh;
+  background:
+    radial-gradient(
+      circle at 10% 10%,
+      rgba(213, 174, 148, 0.12),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 90% 20%,
+      rgba(214, 177, 151, 0.1),
+      transparent 30%
+    ),
+    #f8f1eb;
+}
+
+/* ================================
+   HERO
+   ================================ */
+
+.hero {
+  text-align: center;
+  padding: 75px 20px 45px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.eyebrow {
+  margin: 0 0 18px;
+  color: #a4775b;
+  font-family: Arial, sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 5px;
+}
+
+.hero h1 {
+  margin: 0;
+  color: #684b3a;
+  font-size: clamp(48px, 7vw, 82px);
+  line-height: 1;
+  font-weight: 700;
+}
+
+.subtitle {
+  margin: 25px 0 30px;
+  color: #9a7560;
+  font-family: Arial, sans-serif;
+  font-size: 17px;
+}
+
+/* ================================
+   STATS
+   ================================ */
+
+.stats {
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+  margin-top: 25px;
+}
+
+.stat-card {
+  min-width: 160px;
+  padding: 18px 28px;
+  border: 1px solid #ead8cb;
+  border-radius: 18px;
+  background: rgba(255, 253, 251, 0.75);
+  box-shadow: 0 8px 25px rgba(100, 70, 50, 0.05);
+}
+
+.stat-card strong {
+  display: block;
+  margin-bottom: 5px;
+  color: #a1785c;
+  font-size: 24px;
+}
+
+.stat-card span {
+  color: #9a7560;
+  font-family: Arial, sans-serif;
+  font-size: 13px;
+}
+
+/* ================================
+   MAIN CONTENT
+   ================================ */
+
+.main-content {
+  width: min(1000px, calc(100% - 32px));
+  margin: 0 auto;
+  padding-bottom: 80px;
+}
+
+/* ================================
+   FORM CARD
+   ================================ */
+
+.form-card {
+  padding: 42px;
+  border: 1px solid #ead8cb;
+  border-radius: 28px;
+  background: rgba(255, 253, 251, 0.95);
+  box-shadow: 0 18px 45px rgba(90, 60, 40, 0.08);
+}
+
+.form-heading {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.section-label {
+  display: block;
+  margin-bottom: 10px;
+  color: #a4775b;
+  font-family: Arial, sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 3px;
+}
+
+.form-heading h2 {
+  margin: 0;
+  color: #674a39;
+  font-size: 38px;
+}
+
+.sparkle {
+  color: #b68a68;
+  font-size: 30px;
+}
+
+/* ================================
+   FORM ELEMENTS
+   ================================ */
+
+.form-card label {
+  display: block;
+  margin: 20px 0 9px;
+  color: #765746;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.form-card input[type="text"],
+.form-card textarea {
+  width: 100%;
+  border: 1px solid #e6d1c3;
+  border-radius: 14px;
+  outline: none;
+  background: #fffaf7;
+  color: #604839;
+  padding: 16px 18px;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  transition: 0.2s ease;
+}
+
+.form-card input[type="text"] {
+  height: 56px;
+}
+
+.form-card textarea {
+  min-height: 145px;
+  resize: vertical;
+}
+
+.form-card input[type="text"]:focus,
+.form-card textarea:focus {
+  border-color: #a77d60;
+  box-shadow: 0 0 0 3px rgba(167, 125, 96, 0.12);
+}
+
+.form-card input::placeholder,
+.form-card textarea::placeholder {
+  color: #b49b8b;
+}
+
+/* ================================
+   MOODS
+   ================================ */
+
+.mood-row {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+.mood-button {
+  width: 54px;
+  height: 54px;
+  border: 1px solid #ead6c8;
+  border-radius: 50%;
+  background: #fffaf7;
+  cursor: pointer;
+  font-size: 25px;
+  transition: all 0.2s ease;
+}
+
+.mood-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(100, 70, 50, 0.12);
+}
+
+.active-mood {
+  border: 2px solid #a77d60;
+  background: #f3e5db;
+  transform: scale(1.08);
+  box-shadow: 0 5px 15px rgba(100, 70, 50, 0.12);
+}
+
+.selected-mood {
+  margin: 13px 0 20px;
+  color: #a4775b;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+}
+
+/* ================================
+   BUTTONS
+   ================================ */
+
+.add-button {
+  width: 100%;
+  height: 56px;
+  border: none;
+  border-radius: 13px;
+  background: #a27b60;
+  color: white;
+  cursor: pointer;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  transition: 0.2s ease;
+}
+
+.add-button:hover {
+  background: #8f694f;
+  transform: translateY(-1px);
+}
+
+.cancel-button {
+  width: 100%;
+  height: 48px;
+  margin-top: 10px;
+  border: 1px solid #dec7b8;
+  border-radius: 13px;
+  background: transparent;
+  color: #876653;
+  cursor: pointer;
+}
+
+.cancel-button:hover {
+  background: #f6eae2;
+}
+
+/* ================================
+   JOURNEY
+   ================================ */
+
+.journey {
+  margin-top: 70px;
+}
+
+.journey-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 25px;
+  margin-bottom: 25px;
+}
+
+.journey-header h2 {
+  margin: 0;
+  color: #674a39;
+  font-size: 38px;
+}
+
+.search {
+  width: 280px;
+  height: 50px;
+  padding: 0 18px;
+  border: 1px solid #ead6c8;
+  border-radius: 14px;
+  outline: none;
+  background: #fffaf7;
+  color: #654b3d;
+  font-family: Arial, sans-serif;
+}
+
+.search:focus {
+  border-color: #a77d60;
+}
+
+/* ================================
+   ENTRY CARDS
+   ================================ */
+
+.entries {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.entry-card {
+  position: relative;
+  padding: 34px;
+  border: 1px solid #ead8cb;
+  border-radius: 25px;
+  background: #fffdfb;
+  box-shadow: 0 12px 30px rgba(90, 60, 40, 0.06);
+  transition: 0.25s ease;
+}
+
+.entry-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 16px 35px rgba(90, 60, 40, 0.1);
+}
+
+.entry-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 18px;
+}
+
+.entry-mood {
+  font-size: 27px;
+}
+
+.entry-date {
+  color: #b08d78;
+  font-family: Arial, sans-serif;
+  font-size: 13px;
+}
+
+.entry-card h3 {
+  margin: 0 0 12px;
+  color: #674a39;
+  font-size: 30px;
+}
+
+.entry-card p {
+  margin: 0;
+  color: #765b4b;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+/* ================================
+   ENTRY ACTIONS
+   ================================ */
+
+.entry-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 25px;
+}
+
+.edit-button,
+.delete-button {
+  padding: 11px 20px;
+  border-radius: 11px;
+  cursor: pointer;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  transition: 0.2s ease;
+}
+
+.edit-button {
+  border: 1px solid #ead6c8;
+  background: #f5e9e0;
+  color: #765543;
+}
+
+.edit-button:hover {
+  background: #ead8ca;
+}
+
+.delete-button {
+  border: 1px solid #efd0d0;
+  background: #fff0f0;
+  color: #a35e5e;
+}
+
+.delete-button:hover {
+  background: #f8dddd;
+}
+
+/* ================================
+   EMPTY STATE
+   ================================ */
+
+.empty-card {
+  padding: 55px 25px;
+  border: 1px solid #ead8cb;
+  border-radius: 25px;
+  background: #fffdfb;
+  text-align: center;
+}
+
+.empty-card div {
+  font-size: 42px;
+}
+
+.empty-card h3 {
+  margin: 15px 0 8px;
+  color: #674a39;
+  font-size: 25px;
+}
+
+.empty-card p {
+  margin: 0;
+  color: #9a7560;
+  font-family: Arial, sans-serif;
+}
+
+/* ================================
+   QUOTE
+   ================================ */
+
+.quote-card {
+  position: relative;
+  margin-top: 70px;
+  padding: 55px 60px;
+  border: 1px solid #ead8cb;
+  border-radius: 28px;
+  background:
+    linear-gradient(
+      135deg,
+      rgba(255, 253, 251, 0.95),
+      rgba(247, 235, 226, 0.9)
+    );
+  text-align: center;
+  box-shadow: 0 15px 35px rgba(90, 60, 40, 0.06);
+}
+
+.quote-mark {
+  color: #c09574;
+  font-size: 65px;
+  line-height: 0.6;
+}
+
+.quote-card p {
+  max-width: 750px;
+  margin: 25px auto 15px;
+  color: #674a39;
+  font-size: 25px;
+  line-height: 1.6;
+  font-style: italic;
+}
+
+.quote-card span {
+  color: #a4775b;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+/* ================================
+   FOOTER
+   ================================ */
+
+footer {
+  padding: 35px 20px 50px;
+  color: #a4775b;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+}
+
+/* ================================
+   RESPONSIVE
+   ================================ */
+
+@media (max-width: 700px) {
+
+  .hero {
+    padding: 50px 18px 35px;
+  }
+
+  .hero h1 {
+    font-size: 48px;
+  }
+
+  .stats {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .stat-card {
+    width: 100%;
+    max-width: 260px;
+  }
+
+  .main-content {
+    width: min(100% - 20px, 1000px);
+  }
+
+  .form-card {
+    padding: 25px 20px;
+  }
+
+  .form-heading h2 {
+    font-size: 30px;
+  }
+
+  .journey-header {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .journey-header h2 {
+    font-size: 30px;
+  }
+
+  .search {
+    width: 100%;
+  }
+
+  .entry-card {
+    padding: 25px 20px;
+  }
+
+  .entry-card h3 {
+    font-size: 26px;
+  }
+
+  .quote-card {
+    padding: 40px 25px;
+  }
+
+  .quote-card p {
+    font-size: 20px;
+  }
+}
+/* =========================================
+   AESTHETIC GRATITUDE CALENDAR
+   ========================================= */
+
+.calendar-card {
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid #ead9cd;
+  border-radius: 28px;
+  padding: 32px;
+  margin: 50px 0;
+  box-shadow: 0 15px 35px rgba(91, 64, 45, 0.08);
+}
+
+/* Calendar header */
+
+.calendar-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 28px;
+}
+
+.calendar-title {
+  text-align: center;
+  flex: 1;
+}
+
+.calendar-small {
+  display: block;
+  font-size: 11px;
+  letter-spacing: 3px;
+  color: #a4775a;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.calendar-title h2 {
+  margin: 0;
+  font-family: Georgia, serif;
+  font-size: 28px;
+  color: #6b4634;
+}
+
+/* Previous / next buttons */
+
+.calendar-arrow {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  border: 1px solid #dfc8b8;
+  background: #fffaf7;
+  color: #79563f;
+  font-size: 25px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.calendar-arrow:hover {
+  background: #a47c60;
+  color: white;
+  transform: scale(1.08);
+}
+
+/* Weekdays */
+
+.calendar-weekdays {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.calendar-weekdays span {
+  text-align: center;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #a4775a;
+  padding: 8px 0;
+}
+
+/* Calendar dates */
+
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 8px;
+}
+
+.calendar-empty {
+  min-height: 52px;
+}
+
+.calendar-day {
+  position: relative;
+  min-height: 58px;
+  border-radius: 16px;
+  border: 1px solid #eadbd1;
+  background: #fffdfb;
+  color: #6b4634;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 15px;
+  transition: all 0.25s ease;
+}
+
+.calendar-day:hover {
+  background: #f8eee8;
+  border-color: #c89f84;
+  transform: translateY(-2px);
+}
+
+/* Today's date */
+
+.calendar-today {
+  border: 2px solid #a47c60;
+  background: #fbf1eb;
+  font-weight: 700;
+}
+
+/* Selected date */
+
+.calendar-selected {
+  background: #a47c60;
+  color: white;
+  border-color: #a47c60;
+  box-shadow: 0 6px 15px rgba(164, 124, 96, 0.25);
+}
+
+.calendar-selected:hover {
+  background: #916b51;
+}
+
+/* Days containing gratitude */
+
+.calendar-day.has-gratitude {
+  background: #fff5f1;
+}
+
+.calendar-day.has-gratitude span {
+  font-weight: 700;
+}
+
+.calendar-day small {
+  position: absolute;
+  bottom: 6px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 12px;
+  color: #c47f7f;
+}
+
+/* Calendar explanation */
+
+.calendar-footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 24px;
+  padding-top: 18px;
+  border-top: 1px solid #eee0d8;
+}
+
+.calendar-footer span {
+  color: #c47f7f;
+  font-size: 16px;
+}
+
+.calendar-footer p {
+  margin: 0;
+  color: #9a7865;
+  font-size: 13px;
+}
+
+/* Selected day section */
+
+.selected-day {
+  margin-top: 25px;
+  padding: 22px;
+  background: #fdf7f3;
+  border: 1px solid #eadbd1;
+  border-radius: 20px;
+}
+
+.selected-day h3 {
+  margin: 0 0 15px;
+  font-family: Georgia, serif;
+  color: #6b4634;
+  font-size: 20px;
+}
+
+.calendar-entry {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+  padding: 14px;
+  background: white;
+  border-radius: 14px;
+  margin-top: 10px;
+  border: 1px solid #eee0d8;
+}
+
+.calendar-entry > span {
+  font-size: 22px;
+}
+
+.calendar-entry strong {
+  color: #6b4634;
+  font-family: Georgia, serif;
+}
+
+.calendar-entry p {
+  margin: 5px 0 0;
+  color: #8b6b58;
+  font-size: 14px;
+}
+
+.no-day-entry {
+  margin: 0;
+  color: #a78977;
+  font-size: 14px;
+}
+
+/* =========================================
+   MOBILE
+   ========================================= */
+
+@media (max-width: 600px) {
+
+  .calendar-card {
+    padding: 20px 15px;
+    border-radius: 22px;
+  }
+
+  .calendar-title h2 {
+    font-size: 22px;
+  }
+
+  .calendar-small {
+    font-size: 9px;
+    letter-spacing: 2px;
+  }
+
+  .calendar-arrow {
+    width: 36px;
+    height: 36px;
+    font-size: 20px;
+  }
+
+  .calendar-grid {
+    gap: 5px;
+  }
+
+  .calendar-weekdays {
+    gap: 5px;
+  }
+
+  .calendar-day {
+    min-height: 45px;
+    border-radius: 12px;
+    font-size: 13px;
+  }
+
+  .calendar-empty {
+    min-height: 45px;
+  }
+
+  .calendar-weekdays span {
+    font-size: 9px;
+  }
+
+  .calendar-day small {
+    font-size: 10px;
+    bottom: 3px;
+  }
+}
+/* =========================================
+   REFLECTION + CALENDAR SIDE LAYOUT
+   ========================================= */
+
+.reflection-calendar-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.65fr) minmax(350px, 0.85fr);
+  gap: 28px;
+  align-items: start;
+  margin-bottom: 55px;
+}
+
+.reflection-calendar-grid .form-card {
+  margin-bottom: 0;
+}
+
+.reflection-calendar-grid .calendar-card {
+  margin: 0;
+  height: auto;
+}
+
+/* Make calendar slightly more compact */
+
+.reflection-calendar-grid .calendar-card {
+  padding: 25px 22px;
+}
+
+.reflection-calendar-grid .calendar-title h2 {
+  font-size: 24px;
+}
+
+.reflection-calendar-grid .calendar-small {
+  font-size: 9px;
+  letter-spacing: 2px;
+}
+
+.reflection-calendar-grid .calendar-day {
+  min-height: 48px;
+  border-radius: 13px;
+}
+
+.reflection-calendar-grid .calendar-empty {
+  min-height: 48px;
+}
+
+.reflection-calendar-grid .calendar-grid {
+  gap: 6px;
+}
+
+.reflection-calendar-grid .calendar-weekdays {
+  gap: 6px;
+}
+
+
+/* =========================================
+   MONTHLY PROGRESS
+   ========================================= */
+
+.monthly-progress {
+  margin-top: 22px;
+  padding: 18px;
+  border-radius: 18px;
+  background: #fdf7f3;
+  border: 1px solid #eadbd1;
+}
+
+.progress-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.progress-heading > div {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.progress-heading span:first-child {
+  font-size: 9px;
+  letter-spacing: 2px;
+  font-weight: 700;
+  color: #a4775a;
+}
+
+.progress-heading strong {
+  font-family: Georgia, serif;
+  font-size: 17px;
+  color: #6b4634;
+}
+
+.progress-flower {
+  font-size: 23px;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 8px;
+  border-radius: 20px;
+  background: #eadbd1;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  border-radius: 20px;
+  background: #a47c60;
+  transition: width 0.6s ease;
+}
+
+.monthly-progress p {
+  margin: 10px 0 0;
+  text-align: center;
+  font-size: 12px;
+  color: #9a7865;
+  font-style: italic;
+}
+
+
+/* =========================================
+   MOBILE
+   ========================================= */
+
+@media (max-width: 900px) {
+
+  .reflection-calendar-grid {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .reflection-calendar-grid .calendar-card {
+    margin: 0;
+  }
+
+}
