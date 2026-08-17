@@ -35,6 +35,7 @@ function Login() {
         } else {
           localStorage.setItem("token", data.token);
           alert("Login successful!");
+          window.location.reload();
         }
       } else {
         alert(data.error || "Something went wrong");
