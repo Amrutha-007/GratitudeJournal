@@ -22,12 +22,13 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # SECURITY WARNING: keep the secret key used in production secret!
 import os
 
-SECRET_KEY = os.environ.get('SECRET_KEY')
+SECRET_KEY = os.environ.get('SECRET_KEY', 'django-insecure-local-development-key-12345')
+
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['gratitudejournal-267n.onrender.com']
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'gratitudejournal-267n.onrender.com']
 
 
 # Application definition
