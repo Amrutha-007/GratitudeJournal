@@ -38,16 +38,20 @@ function App() {
   // GET ENTRIES
   // =========================
 
-  const fetchEntries = () => {
-    fetch(API_URL)
-      .then((response) => response.json())
-      .then((data) => {
+  const fetchEntries = async () => {
+    try {
+        const response = await fetch(API_URL);
+
+         if (!response.ok) {
+           throw new Error(`HTTP error! Status: ${response.status}`);
+        }
+
+    const data = await response.json();
         setEntries(data);
-      })
-      .catch((error) => {
-        console.error("Error loading entries:", error);
-      });
-  };
+        } catch (error) {
+         console.error("Error loading entries:", error);
+       }
+   };
 
   useEffect(() => {
     fetchEntries();
