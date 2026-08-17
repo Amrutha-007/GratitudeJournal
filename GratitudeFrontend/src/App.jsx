@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import "./App.css";
 
-const API_URL = "http://127.0.0.1:8000/api/gratitude/";
+const API_URL = "https://gratitudejournal-267n.onrender.com/api/gratitude/";
 
 const moods = ["😊", "🥰", "🌸", "✨", "😌", "💗"];
 
