@@ -45,7 +45,11 @@ function App() {
 
   const fetchEntries = async () => {
     try {
-        const response = await fetch(API_URL);
+        const response = await fetch(API_URL, {
+             headers: {
+               Authorization: `Token ${localStorage.getItem("token")}`,
+             },
+         });
 
          if (!response.ok) {
            throw new Error(`HTTP error! Status: ${response.status}`);
@@ -88,6 +92,7 @@ function App() {
           method: "PUT",
           headers: {
             "Content-Type": "application/json",
+            Authorization: `Token ${localStorage.getItem("token")}`,
           },
           body: JSON.stringify(entryData),
         });
@@ -96,6 +101,7 @@ function App() {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
+            Authorization: `Token ${localStorage.getItem("token")}`,
           },
           body: JSON.stringify(entryData),
         });
@@ -151,6 +157,9 @@ function App() {
     try {
       const response = await fetch(`${API_URL}${id}/`, {
         method: "DELETE",
+        headers: {
+            Authorization: `Token ${localStorage.getItem("token")}`,
+          },
       });
 
       if (!response.ok) {
