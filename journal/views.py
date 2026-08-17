@@ -42,7 +42,7 @@ class RegisterView(APIView):
             password=password
         )
 
-        token = Token.objects.create(user=user)
+        token, created = Token.objects.get_or_create(user=user)
 
         return Response({
             "message": "Account created successfully",
