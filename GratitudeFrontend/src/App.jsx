@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import "./App.css";
+import Login from "./Login";
 
 const API_URL = "https://gratitudejournal-267n.onrender.com/api/gratitude/";
 
@@ -21,6 +22,10 @@ const monthNames = [
 ];
 
 function App() {
+  const [loggedIn, setLoggedIn] = useState(
+  !!localStorage.getItem("token")
+   );
+
   const [entries, setEntries] = useState([]);
 
   const [title, setTitle] = useState("");
@@ -281,6 +286,10 @@ function App() {
         );
       })
     : [];
+
+    if (!loggedIn) {
+    return <Login onLogin={() => setLoggedIn(true)} />;
+  }
 
   return (
     <div className="app">
