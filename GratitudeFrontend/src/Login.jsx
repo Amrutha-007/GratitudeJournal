@@ -33,7 +33,7 @@ function Login() {
           setUsername("");
           setPassword("");
         } else {
-          localStorage.setItem("token", data.token);
+          sessionStorage.setItem("token", data.token);
           alert("Login successful!");
           window.location.reload();
         }

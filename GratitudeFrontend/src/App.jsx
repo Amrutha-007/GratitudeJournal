@@ -23,7 +23,7 @@ const monthNames = [
 
 function App() {
   const [loggedIn, setLoggedIn] = useState(
-  !!localStorage.getItem("token")
+  !!sessionStorage.getItem("token")
    );
 
   const [entries, setEntries] = useState([]);
@@ -47,7 +47,7 @@ function App() {
     try {
         const response = await fetch(API_URL, {
              headers: {
-               Authorization: `Token ${localStorage.getItem("token")}`,
+               Authorization: `Token ${sessionStorage.getItem("token")}`,
              },
          });
 
@@ -92,7 +92,7 @@ function App() {
           method: "PUT",
           headers: {
             "Content-Type": "application/json",
-            Authorization: `Token ${localStorage.getItem("token")}`,
+            Authorization: `Token ${sessionStorage.getItem("token")}`,
           },
           body: JSON.stringify(entryData),
         });
@@ -101,7 +101,7 @@ function App() {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
-            Authorization: `Token ${localStorage.getItem("token")}`,
+            Authorization: `Token ${sessionStorage.getItem("token")}`,
           },
           body: JSON.stringify(entryData),
         });
@@ -158,7 +158,7 @@ function App() {
       const response = await fetch(`${API_URL}${id}/`, {
         method: "DELETE",
         headers: {
-            Authorization: `Token ${localStorage.getItem("token")}`,
+            Authorization: `Token ${sessionStorage.getItem("token")}`,
           },
       });
 
@@ -295,6 +295,11 @@ function App() {
         );
       })
     : [];
+    
+    const handleLogout = () => {
+      sessionStorage.removeItem("token");
+       setLoggedIn(false);
+    }; 
 
     if (!loggedIn) {
     return <Login onLogin={() => setLoggedIn(true)} />;
@@ -342,6 +347,10 @@ function App() {
           </div>
 
         </div>
+
+        <button onClick={handleLogout} className="logout-button">
+            Logout
+        </button>
 
       </header>
 

@@ -978,3 +978,20 @@ footer {
   }
 
 }
+.logout-button {
+  margin-top: 25px;
+  padding: 10px 25px;
+  border: 1px solid #76544c;
+  border-radius: 20px;
+  background: transparent;
+  color: #76544c;
+  font-family: Georgia, serif;
+  font-size: 14px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.logout-button:hover {
+  background: #76544c;
+  color: white;
+}
