@@ -28,7 +28,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY', 'django-insecure-local-development-key
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'gratitudejournal-267n.onrender.com']
+ALLOWED_HOSTS = ['gratitudejournal-267n.onrender.com', 'localhost', '127.0.0.1']
 
 
 # Application definition
